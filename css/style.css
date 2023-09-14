@@ -1,0 +1,72 @@
+header{
+    display: flex;
+    background-color: antiquewhite;
+    border: 2px solid #777777;
+    align-items: center;
+    padding: 0px 30px;
+    justify-content: center;
+}
+
+header img {
+    margin: 5px 4px;
+    scale: 120%;
+    margin-inline-end: 4vw;
+    margin-inline-start: 25px;
+}
+
+header p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+header div {
+    text-align: center;
+}
+
+#header_text {
+    width: 100%;
+}
+
+
+.nav_bar{
+    grid-area: nav_var;
+    display: flex;
+    margin: 2px;
+    background-color: brown;
+    justify-content: center;
+
+}
+
+.nav_bar ul {
+    margin-inline: 5px;
+    list-style: none;
+    margin:0px;
+    padding: 0px;
+}
+
+.nav_bar ul li {
+    margin-inline: 5px;
+    display: inline-block;
+}
+
+.nav_bar ul li a {
+    color: white;
+}
+
+.nav_bar ul li a:hover {
+    background-color: gray;
+    color: red;
+}
+
+
+
+/** media queries*/
+
+@media (max-width: 400px) 
+    
+{ 
+    #header_text {
+        font-size: 15px;
+        color: blue;
+        width: 150px;
+    }
+}
