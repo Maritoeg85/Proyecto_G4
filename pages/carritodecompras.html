@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pa Que Leo</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/logo Paqueleo sin fondo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<nav id="irarriba">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <a href="../index.html"><img src="../img/logo Paqueleo sin fondo.png" alt="logo sin fondo"></a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="productos"
+                        href="../pages/productos.html"><strong>Productos</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="Pedidos"
+                        href="../pages/pedidos.html"><strong>Pedido</strong></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" aria-current="Contactos" href="../pages/contacto.html" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false"><strong>Contactos</strong>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../pages/comercio.html"><strong>Comercio</strong></a>
+                            </li>
+                            <li><a class="dropdown-item" href="../pages/soporte.html"><strong>Soporte</strong></a>
+                            </li>
+                            <li><a class="dropdown-item" href="../pages/delivery.html"><strong>Delivery</strong></a>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <a target="_blank" href="http://www.facebook.com" target="_blank"><img class="redes"
+                    src="../img/facebook.png" alt="logo facebook"></a>
+            <a target="_blank" href="https://www.gmail.com/mail/help/intl/es/about.html?iframe/"><img class="redes"
+                    src="../img/mail-icon.png" alt="logo mail"></a>
+            <a target="_blank" href="https://api.whatsapp.com/send/?phone=5491171168638" target="_blank"><img
+                    class="redes" src="../img/whatsapp-favicon.png" width="10px" height="10px" alt="Whatsapp"></a>
+            <a target="_blank" href="https://www.instagram.com/" target="_blank"><img class="redes"
+                    src="../img/instagram.jpg" width="10px" height="10px" alt="Whatsapp"></a>
+        </div>
+</nav>
+<hr>
+
+<body>
+    <div id="mensaje"></div>
+    <div class="col col-sm-12">
+        <h2>Productos</h2>
+        <ul id="productos">
+            <li>
+                <span>1 Hamburguesa Wopper Sencilla</span>
+                <button class="agregar-carrito" data-id="1" data-nombre="Producto 1" data-precio="10">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>2 Hamburguesas Pequeñas</span>
+                <button class="agregar-carrito" data-id="1" data-nombre="Producto 1" data-precio="10">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Hamburguesa Sencilla 1 contorno</span>
+                <button class="agregar-carrito" data-id="1" data-nombre="Producto 1" data-precio="10">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Hamburguesa Especial 1 contorno</span>
+                <button class="agregar-carrito" data-id="1" data-nombre="Producto 1" data-precio="10">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Hamburguesa Sencilla Maracucha</span>
+                <button class="agregar-carrito" data-id="1" data-nombre="Producto 1" data-precio="10">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Hamburguesa Especial Maracucha</span>
+                <button class="agregar-carrito" data-id="1" data-nombre="Producto 1" data-precio="10">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>2 Panes con salchichas o Huevo</span>
+                <button class="agregar-carrito" data-id="2" data-nombre="Producto 2" data-precio="15">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>1 Arepa Sencilla Asada o Frita</span>
+                <button class="agregar-carrito" data-id="2" data-nombre="Producto 2" data-precio="15">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Arepon Sencillo - 4 Arepas Asada o Frita Amarillas</span>
+                <button class="agregar-carrito" data-id="2" data-nombre="Producto 2" data-precio="15">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Arepon Especial - 6 Arepas Asada o Frita Amarillas</span>
+                <button class="agregar-carrito" data-id="2" data-nombre="Producto 2" data-precio="15">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Tumbarranchos</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>1 Patacon Sencillo Verde o Amarillo</span>
+                <button class="agregar-carrito" data-id="1" data-nombre="Producto 1" data-precio="10">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>1 Patacon Especial Verde o Amarillo</span>
+                <button class="agregar-carrito" data-id="2" data-nombre="Producto 2" data-precio="15">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Papas Fritas</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Lomito</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Pollo</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Carne Mechada</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Pepsi</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>CocaCola</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Pinita Golden</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Uva Golden</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Naranja Golden</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Agua</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Malta</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+            <li>
+                <span>Cervezas</span>
+                <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al carrito</button>
+            </li>
+        </ul>
+    </div>
+    <ul id="mostrar"></ul>
+    <script src="../js/script.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+</body>
+<div class="sucursales">
+    <div>
+        Sucursales
+        <br>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d980.5193403146526!2d-71.62088973048802!3d10.573119317683021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDM0JzIzLjIiTiA3McKwMzcnMTIuOSJX!5e0!3m2!1ses-419!2sar!4v1682992275329!5m2!1ses-419!2sar"
+            width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+
+
+<p class="iframe">
+<iframe  src="https://www.youtube.com/embed/4DZfHmSSpTU?start=10" title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</p>
+
+<br>
+
+<br>
+
+<footer class="footer">
+
+    <div class="redes">
+        <p><em><strong> Todos los Derechos Reservados</p></em></strong>
+
+
+        <a target="_blank" href="http://www.facebook.com" target="_blank"><img class="imagen" src="../img/facebook.png"
+                width="20px" height="20px" alt="logo facebook">
+            <a target="_blank" href="https://www.gmail.com/mail/help/intl/es/about.html?iframe/"><img class="imagen"
+                    src="../img/mail-icon.png" width="40px" height="40px" alt="logo mail"></a>
+            <a target="_blank" href="https://www.whatsapp.com/?lang=es" target="_blank"><img class="imagen"
+                    src="../img/whatsapp-favicon.png" width="40px" height="40px" alt="Whatsapp"></a>
+            <a target="_blank" href="https://www.instagram.com/" target="_blank"><img class="imagen"
+                    src="../img/instagram.jpg" width="40px" height="40px" alt="Whatsapp"></a>
+
+    </div>
+
+    <br>
+    <br>
+    <a href="#irarriba">Ir arriba</a>
+    </div>
+
+</footer>
+<br>
+
+</html>
