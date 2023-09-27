@@ -1,0 +1,401 @@
+/* Estilos generales */
+
+* {
+    text-decoration: none;
+    font-family: 'Special Elite', cursive;
+}
+
+body{
+    background: black;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 0px;
+}
+
+h2 {
+    color: wheat;
+    margin-top: 0px;
+}
+
+h3 {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+/* Estilos para el header */
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    background-image: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url(/imagenes/Madera.jpg); 
+    background-size: 100%;
+}
+
+/* Estilos para la barra de navegación */
+
+nav {
+    position: sticky;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+}
+
+nav div {
+    display: flex;
+    height: 60px;
+    align-items: flex-end;
+}
+
+nav div div a {
+    color: black
+}
+
+nav div div {
+    font-size: 15px;
+    border: 1px solid black;
+    width: 20%;
+    height: 30px;
+    align-items: center;
+    justify-content: center; 
+    background-image: url(/imagenes/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
+    border-radius: 15px 15px 0px 0px;
+    transition: height 0.2s ease;
+}
+
+nav div div a:hover{
+    color:brown;
+}
+
+nav div div:hover{
+    border: 1px solid black;
+    height: 60px;
+    align-items: center;
+}
+
+/* Estilos para la maquetación de la página Inicio */
+
+.contenedor-grid {
+    display: grid;
+    grid-template: auto 400px / 30% 30% auto;
+    grid-template-areas: "titulo titulo titulo" 
+                         "imagen_1 imagen_2 texto";
+}
+
+.titulo_portada {
+    grid-area: titulo;
+    display: flex;
+    padding-top: 20px;
+    color: white;
+}
+
+.imagen_portada_1 {
+    grid-area: imagen_1;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.imagen_portada_2 {
+    grid-area: imagen_2;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.contenido_portada {
+    grid-area: texto;
+    display: flex;
+    padding: 10px;
+    text-align: justify;
+    font-family: 'Special Elite', cursive;
+    color: white;
+}
+
+/* Estilos para la maquetación del footer */
+
+.contenedor-grid-footer {
+    display: grid;
+    grid-template: auto / auto auto;
+    grid-template-areas: "direccion redes";
+    color: white;
+}
+
+footer div p {
+    grid-area: direccion;
+    padding: 10px;
+}
+
+footer div div {
+    grid-area: redes;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div a {
+    color: white
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%
+}
+
+.iconos_footer {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos para la maquetación de la página Historia */
+
+.contenedor_grid_historia {
+    display: grid;
+    grid-template: auto 400px / 30% auto;
+    grid-template-areas: "titulo_historia titulo_historia" 
+                         "imagen_historia texto_historia";
+}
+
+.titulo_historia {
+    grid-area: titulo_historia;
+    display: flex;
+    padding-top: 20px;
+}
+
+.imagen_historia {
+    grid-area: imagen_historia;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.contenido_historia {
+    grid-area: texto_historia;
+    display: flex;
+    padding: 10px;
+    text-align: justify;
+    font-family: 'Special Elite', cursive;
+    color: white;
+}
+
+/* Estilos para la maquetación de la página Pizzas */
+
+.articulo_pizza {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5%;
+    background-image: url(/imagenes/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
+}
+
+.fondo_pizzas {
+    padding: 10px;
+    border-radius: 1;
+}
+
+.texto_pizza {
+    text-align: center;
+    color: black;
+}
+
+.imagen_pizza {
+    height: 25vh;
+    overflow: hidden;
+    border-radius: 10%;
+    border: 1px solid black
+}
+
+.imagen_pizza img {
+    height: 100%
+}
+
+.contenedor_grid_pizzas {
+    display: grid;
+    grid-template: auto auto auto auto / 25% 25% 25% 25%;
+    grid-template-areas: "titulo_pizza titulo_pizza titulo_pizza titulo_pizza" 
+                         "pizza_1 pizza_2 pizza_3 pizza_4"
+                         "pizza_5 pizza_6 pizza_7 pizza_8"
+                         "pizza_9 pizza_10 pizza_11 pizza_12";
+}
+
+.titulo_pizzas {
+    grid-area: titulo_pizza;
+    display: flex;
+    padding-top: 20px;
+}
+
+.pizza_1 {
+    grid-area: pizza_1;
+}
+
+.pizza_2 {
+    grid-area: pizza_2;
+}
+
+.pizza_3 {
+    grid-area: pizza_3;
+}
+
+.pizza_4 {
+    grid-area: pizza_4;
+}
+
+.pizza_5 {
+    grid-area: pizza_5;
+}
+
+.pizza_6 {
+    grid-area: pizza_6;
+}
+
+.pizza_7 {
+    grid-area: pizza_7;
+}
+
+.pizza_8 {
+    grid-area: pizza_8;
+}
+
+.pizza_9 {
+    grid-area: pizza_9;
+}
+
+.pizza_10 {
+    grid-area: pizza_10;
+}
+
+.pizza_11 {
+    grid-area: pizza_11;
+}
+
+.pizza_12 {
+    grid-area: pizza_12;
+}
+
+
+/* Estilos para la maquetación de la página Pedidos */
+
+.fondo_formulario {
+    background-image: url(/imagenes/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
+    border-radius: 5%;
+    border: 1px solid black;
+}
+
+form {
+    padding: 20px;
+}
+
+input[id=cant] {
+    width: 30px;
+}
+
+input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
+    width: 100%;
+}
+.titulo_pedido {
+    padding-top: 20px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .contenedor_grid_pizzas {
+        display: grid;
+        grid-template: auto auto auto auto auto / 33% auto 33%;
+        grid-template-areas: "titulo_pizza titulo_pizza titulo_pizza" 
+                            "pizza_1 pizza_2 pizza_3"                    
+                            "pizza_4 pizza_5 pizza_6"
+                            "pizza_7 pizza_8 pizza_9"
+                            "pizza_10 pizza_11 pizza_12";
+    }
+}
+
+@media (max-width: 900px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template: auto 200px 200px/ 30% auto;
+        grid-template-areas: "titulo titulo" 
+                             "imagen_1 texto"
+                             "imagen_2 texto";
+    }
+
+    .contenedor_grid_pizzas {
+        display: grid;
+        grid-template: auto auto auto auto auto auto auto/ 50% 50%;
+        grid-template-areas: "titulo_pizza titulo_pizza" 
+                            "pizza_1 pizza_2"                    
+                            "pizza_3 pizza_4"
+                            "pizza_5 pizza_6"                    
+                            "pizza_7 pizza_8"
+                            "pizza_9 pizza_10"
+                            "pizza_11 pizza_12";
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor_grid_pizzas {
+        display: grid;
+        grid-template: auto auto auto auto auto auto auto auto auto auto auto auto auto/ auto;
+        grid-template-areas: "titulo_pizza" 
+                            "pizza_1"                    
+                            "pizza_2"
+                            "pizza_3"                    
+                            "pizza_4"
+                            "pizza_5"
+                            "pizza_6"
+                            "pizza_7"                    
+                            "pizza_8"
+                            "pizza_9"                    
+                            "pizza_10"
+                            "pizza_11"
+                            "pizza_12";
+    }
+}
+
+@media (max-width: 550px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template: auto 200px auto/ 50% 50%;
+        grid-template-areas: "titulo titulo" "imagen_1 imagen_2" "texto texto";
+    }
+
+    .contenedor_grid_historia {
+        display: grid;
+        grid-template: auto 400px auto / auto;
+        grid-template-areas: "titulo_historia" 
+                             "imagen_historia" 
+                             "texto_historia";
+    }
+
+    .contenedor-grid-footer {
+        display: grid;
+        grid-template: auto auto/ auto;
+        grid-template-areas: "direccion"
+                             "redes";
+    }
+
+    footer div p {
+        grid-area: direccion;
+        padding: 0px;
+    } 
+}
