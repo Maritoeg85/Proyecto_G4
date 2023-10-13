@@ -39,7 +39,7 @@ header div {
     flex-direction: column;
     align-items: center;
     justify-content: center;  
-    background-image: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url(/imagenes/Madera.jpg); 
+    background-image: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url(../img/Madera.jpg); 
     background-size: 100%;
 }
 
@@ -70,7 +70,7 @@ nav div div {
     height: 30px;
     align-items: center;
     justify-content: center; 
-    background-image: url(/imagenes/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
+    background-image: url(../img/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
     border-radius: 15px 15px 0px 0px;
     transition: height 0.2s ease;
 }
@@ -205,7 +205,7 @@ footer {
     align-items: center;
     padding: 10px;
     border-radius: 5%;
-    background-image: url(/imagenes/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
+    background-image: url(../img/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
 }
 
 .fondo_pizzas {
@@ -296,7 +296,7 @@ footer {
 /* Estilos para la maquetación de la página Pedidos */
 
 .fondo_formulario {
-    background-image: url(/imagenes/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
+    background-image: url(../img/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
     border-radius: 5%;
     border: 1px solid black;
 }
