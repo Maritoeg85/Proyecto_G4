@@ -310,7 +310,7 @@ input[id=cant] {
 }
 
 input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
-    width: 100%;
+    width: 20%;
 }
 .titulo_pedido {
     padding-top: 20px;
@@ -398,4 +398,28 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
         grid-area: direccion;
         padding: 0px;
     } 
+}
+
+/* Estilos para la maquetación de la página Contacto */
+
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0,3);
+    z-index: 100;
+}
+
+
+.btn-wsp:hover {
+   text-decoration: none;
+    background: #0df053;
+    color: #fff;
+   
 }
