@@ -131,10 +131,11 @@ nav div div:hover{
 /* Estilos para la maquetación del footer */
 
 .contenedor-grid-footer {
-    display: grid;
+    display:grid;
     grid-template: auto / auto auto;
     grid-template-areas: "direccion redes";
     color: white;
+    margin-top: 5vmax;
 }
 
 footer div p {
@@ -206,6 +207,7 @@ footer {
     padding: 10px;
     border-radius: 5%;
     background-image: url(../img/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
+    /*min-height: 50vh; */
 }
 
 .fondo_pizzas {
@@ -213,9 +215,14 @@ footer {
     border-radius: 1;
 }
 
+.nombre_pizza{
+    text-align: center;
+}
+
 .texto_pizza {
     text-align: center;
     color: black;
+    min-height: 22vh;
 }
 
 .imagen_pizza {
@@ -225,7 +232,20 @@ footer {
     border: 1px solid black
 }
 
+
+
 .imagen_pizza img {
+    height: 100%
+}
+
+.imagen_bebida {
+    height: 25vh;
+    overflow: hidden;
+    border-radius: 10%;
+    /* border: 1px solid black */
+}
+
+.imagen_bebida img {
     height: 100%
 }
 
