@@ -6,7 +6,15 @@ function testLlamada() {
 
 function agregarPizza(numero) {
     let x = document.getElementsByClassName("cantArticulo")
-    x[numero].innerText = parseInt(x[numero].innerText) + 1
+    let arregloCantidad = []
+    let total = 0
+    for (let i = 0; i < 12; i++) {
+        total = total + parseInt(x[i].innerText)
+    }
+    if (total < 10) {
+        x[numero].innerText = parseInt(x[numero].innerText) + 1
+    }
+    localStorage.setItem("Total", arregloCantidad)
 }
 
 function eliminarPizza(numero) {
