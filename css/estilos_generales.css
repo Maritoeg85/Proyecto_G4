@@ -332,6 +332,18 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
     padding-top: 20px;
 }
 
+.mensajes-alerta {
+    color: red;
+    font-weight: 600;
+    font-size: small;
+    margin-top: 5px;
+}
+
+.envioForm {
+    color: rgb(15, 87, 15);
+    font-weight: 600;
+}
+
 /* Media Queries */
 
 @media (max-width: 1200px) {

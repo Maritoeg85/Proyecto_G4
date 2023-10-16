@@ -37,23 +37,27 @@
                 <h2>Completá tu pedido</h2>
             </div>
             <div class="fondo_formulario">
-                <form action="">
+                <form action="" name="formPedido">
                     <div>
                         Lista de pedidos:
                     </div>
                     <ul id="listaPedido"></ul>
                                         
                     <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre"><br><br>
+                    <input type="text" id="nombre" name="nombre"><br>
+                    <div class="mensajes-alerta" id="alertNombre"></div><br>
                     
                     <label for="direccion">Dirección:</label><br>
-                    <input type="text" id="direccion" name="direccion"><br><br>
+                    <input type="text" id="direccion" name="direccion"><br>
+                    <div class="mensajes-alerta" id="alertDireccion"></div><br>
                     
                     <label for="tel">Teléfono:</label><br>
-                    <input type="number" id="tel" name="tel"><br><br>
+                    <input type="number" id="tel" name="tel"><br>
+                    <div class="mensajes-alerta" id="alertTel"></div><br>
                     
                     <label for="correo">Correo electrónico:</label><br>
-                    <input type="email" id="correo" name="correo"><br><br>
+                    <input type="email" id="correo" name="correo"><br>
+                    <div class="mensajes-alerta" id="alertCorreo"></div><br>
 
                     <label for="">Rango horario de entrega:</label><br>
                     <input type="radio" id="primera" name="hora">
@@ -61,12 +65,12 @@
                     <input type="radio" id="segunda" name="hora">
                     <label for="segunda">Entre las 21:00 y las 22:00</label><br>
                     <input type="radio" id="tercera" name="hora">
-                    <label for="tercera">Entre las 22:00 y las 23:00</label><br><br>
+                    <label for="tercera">Entre las 22:00 y las 23:00</label><br>
+                    <div class="mensajes-alerta" id="alertHora"></div><br>
                     <div class="g-recaptcha" data-sitekey="6LeDx6coAAAAACx-FQxEuAY7mMPuFkRt40sQq9Ts"></div>
                     <br>
-                    <button class="boton_agregar_eliminar">
-                        Enviar
-                    </button>
+                    <input type="button" class="boton_agregar_eliminar" value="Enviar" onclick="validarForm()"><br><br>
+                    <div class="envioForm" id="envioForm"></div><br>
                 </form>
             </div>
         </div>

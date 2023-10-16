@@ -15,7 +15,7 @@ function agregarPizza(numero) {
         x[numero].innerText = parseInt(x[numero].innerText) + 1
     }
     for (let i = 0; i < 12; i++) {
-         arregloCantidad.push(parseInt(x[i].innerText))
+        arregloCantidad.push(parseInt(x[i].innerText))
     }
     localStorage.setItem("Total", JSON.stringify(arregloCantidad))
 }
@@ -43,6 +43,51 @@ function mostrarPedido() {
             ingreso.innerText = cantidadesPizzas[i] + " x " + listaPizzas[i]
             listaPedidoCompleta.appendChild(ingreso)
         }
-        
     }
+}
+
+function enviar() {
+    document.formPedido.submit()
+}
+
+function validarForm() {
+    let nombre = document.formPedido.nombre.value
+    let alertNombre = document.getElementById("alertNombre")
+    if (nombre == "") { alertNombre.innerText = "Escriba un nombre válido"; return  }
+    else { alertNombre.innerText = "" }
+
+    let direccion = document.formPedido.direccion.value
+    let alertDireccion = document.getElementById("alertDireccion")
+    if (direccion == "") { alertDireccion.innerText = "Escriba una dirección válida"; return  }
+    else { alertDireccion.innerText = "" }
+
+    let telefono = document.formPedido.tel.value
+    let alertTel = document.getElementById("alertTel")
+    if (telefono.length != 10) { alertTel.innerText = "Escriba un número de teléfono válido"; return  }
+    else { alertTel.innerText = "" }
+
+    let correo = document.formPedido.correo.value
+    let alertCorreo = document.getElementById("alertCorreo")
+    let contador = 0
+    for (i = 0; i < correo.length; i++) {
+        if (correo.charAt(i) == "@" || correo.charAt(i) == ".") {
+            contador = contador + 1
+        }
     }
+    if (contador != 2) { alertCorreo.innerText = "Escriba una dirección de correo válida"; return  }
+    else { alertCorreo.innerText = "" }
+    
+    let alertHora = document.getElementById("alertHora")
+    if (
+        document.formPedido.hora[0].checked == false &&
+        document.formPedido.hora[1].checked == false &&
+        document.formPedido.hora[2].checked == false
+    ) { alertHora.innerText = "Seleccione un horario de entrega"; return }
+    else { alertHora.innerText = "" }
+
+    let envioForm = document.getElementById("envioForm")
+    envioForm.innerText = "Su formulario fue enviado con éxito"
+    setTimeout(() => {
+        document.formPedido.submit()
+    }, 2000);
+}
