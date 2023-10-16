@@ -19,6 +19,7 @@ fetch(productos_url, {
   var productos = lista.productos;
   console.log(productos);
   productos = productos.slice(0,12);
+  console.log(productos);
   // Actualiza el contenido del elemento HTML con el id "contenedor_grid_pizzas".
   for (var i = 0 ; i<12 ; i++) {
   contenedor_grid_pizzas.innerHTML += `

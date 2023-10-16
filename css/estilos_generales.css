@@ -236,9 +236,9 @@ footer {
     display: grid;
     grid-template: auto auto auto auto / 25% 25% 25% 25%;
     grid-template-areas: "titulo_pizza titulo_pizza titulo_pizza titulo_pizza" 
-                         "pizza_1 pizza_2 pizza_3 pizza_4"
-                         "pizza_5 pizza_6 pizza_7 pizza_8"
-                         "pizza_9 pizza_10 pizza_11 pizza_12";
+                         "pizza_0 pizza_1 pizza_2 pizza_3"
+                         "pizza_4 pizza_5 pizza_6 pizza_7"
+                         "pizza_8 pizza_9 pizza_10 pizza_11";
 }
 
 .titulo_pizzas {
@@ -326,10 +326,10 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
         display: grid;
         grid-template: auto auto auto auto auto / 33% auto 33%;
         grid-template-areas: "titulo_pizza titulo_pizza titulo_pizza" 
-                            "pizza_1 pizza_2 pizza_3"                    
-                            "pizza_4 pizza_5 pizza_6"
-                            "pizza_7 pizza_8 pizza_9"
-                            "pizza_10 pizza_11 pizza_12";
+                            "pizza_0 pizza_1 pizza_2"                    
+                            "pizza_3 pizza_4 pizza_5"
+                            "pizza_6 pizza_7 pizza_8"
+                            "pizza_9 pizza_10 pizza_11";
     }
 }
 
@@ -346,12 +346,12 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
         display: grid;
         grid-template: auto auto auto auto auto auto auto/ 50% 50%;
         grid-template-areas: "titulo_pizza titulo_pizza" 
-                            "pizza_1 pizza_2"                    
-                            "pizza_3 pizza_4"
-                            "pizza_5 pizza_6"                    
-                            "pizza_7 pizza_8"
-                            "pizza_9 pizza_10"
-                            "pizza_11 pizza_12";
+                            "pizza_0 pizza_1"                    
+                            "pizza_2 pizza_3"
+                            "pizza_4 pizza_5"                    
+                            "pizza_6 pizza_7"
+                            "pizza_8 pizza_9"
+                            "pizza_10 pizza_11";
     }
 }
 
@@ -360,18 +360,18 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
         display: grid;
         grid-template: auto auto auto auto auto auto auto auto auto auto auto auto auto/ auto;
         grid-template-areas: "titulo_pizza" 
-                            "pizza_1"                    
-                            "pizza_2"
-                            "pizza_3"                    
+                            "pizza_0"                    
+                            "pizza_1"
+                            "pizza_2"                    
+                            "pizza_3"
                             "pizza_4"
                             "pizza_5"
-                            "pizza_6"
-                            "pizza_7"                    
-                            "pizza_8"
-                            "pizza_9"                    
+                            "pizza_6"                    
+                            "pizza_7"
+                            "pizza_8"                    
+                            "pizza_9"
                             "pizza_10"
-                            "pizza_11"
-                            "pizza_12";
+                            "pizza_11";
     }
 }
 
