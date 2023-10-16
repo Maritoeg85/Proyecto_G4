@@ -35,10 +35,16 @@ fetch(productos_url, {
                     <p>${productos[i].descripcion}</p>
                     <p>Ingredientes: ${productos[i].ingredientes}</p>
                 </div>
-                <tr>
-                    <td><label for="pizza_${i}">Agregar a mi pedido:</label></td>
-                    <td><input type="number" id="cant" name="pizza_${i}"></td>
-                </tr>
+                <h4>Solo por: $ ${productos[i].precio}</h4>
+                <a>Cantidad: <span class="cantArticulo">0</span></a>
+              <div>
+                <button class="boton_agregar_eliminar" onclick="agregarPizza(${i})">
+                    Agregar
+                </button>
+                <button class="boton_agregar_eliminar" onclick="eliminarPizza(${i})">
+                    Eliminar
+                </button>
+            </div>
             </div>
         </div>
     </article>`;
@@ -46,5 +52,21 @@ fetch(productos_url, {
   })
 
 }
+
+function agregarPizza(numero) {
+  let x = document.getElementsByClassName("cantArticulo")
+  x[numero].innerText = parseInt(x[numero].innerText) + 1
+}
+
+function eliminarPizza(numero) {
+  let x = document.getElementsByClassName("cantArticulo")
+  if (parseInt(x[numero].innerText) > 0) {
+      x[numero].innerText = parseInt(x[numero].innerText) - 1
+  }
+}
+
+// Falta la funcion que traspasa las cantidades al pedido
+
+// Falta funcion para totalizar el monto del pedido
 
 leeproductos()
