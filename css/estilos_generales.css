@@ -292,6 +292,22 @@ footer {
     grid-area: pizza_12;
 }
 
+.boton_agregar_eliminar {
+    font-size: 15px;
+    height: 50px;
+    width: 100px;
+    border-radius: 10%;
+    transition: font-size 0.2s ease;
+}
+
+.boton_agregar_eliminar:hover {
+    font-size: 17px;
+    background-color: lightgreen;
+}
+
+.cantArticulo {
+    font-weight: 600;
+}
 
 /* Estilos para la maquetación de la página Pedidos */
 
@@ -314,6 +330,18 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
 }
 .titulo_pedido {
     padding-top: 20px;
+}
+
+.mensajes-alerta {
+    color: red;
+    font-weight: 600;
+    font-size: small;
+    margin-top: 5px;
+}
+
+.envioForm {
+    color: rgb(15, 87, 15);
+    font-weight: 600;
 }
 
 /* Media Queries */
