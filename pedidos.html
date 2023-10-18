@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/estilos_generales.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="./js/funciones.js"></script>
 </head>
 
-<body>
+<body onload="mostrarPedido()">
     <div>
         <header>
             <div>
@@ -36,74 +39,27 @@
                 <h2>Completá tu pedido</h2>
             </div>
             <div class="fondo_formulario">
-                <form action="">
-                    <table>
-                        <tr>
-                            <td>Pizzas</td>
-                            <td>Cant.</td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_1">Pizza 1:</label></td>
-                            <td><input type="number" id=cant name="pizza_1"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_2">Pizza 2:</label></td>
-                            <td><input type="number" id=cant name="pizza_2"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_3">Pizza 3:</label></td>
-                            <td><input type="number" id=cant name="pizza_3"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_4">Pizza 4:</label></td>
-                            <td><input type="number" id=cant name="pizza_4"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_5">Pizza 5:</label></td>
-                            <td><input type="number" id=cant name="pizza_5"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_6">Pizza 6:</label></td>
-                            <td><input type="number" id=cant name="pizza_6"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_7">Pizza 7:</label></td>
-                            <td><input type="number" id=cant name="pizza_7"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_8">Pizza 8:</label></td>
-                            <td><input type="number" id=cant name="pizza_8"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_9">Pizza 9:</label></td>
-                            <td><input type="number" id=cant name="pizza_9"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_10">Pizza 10:</label></td>
-                            <td><input type="number" id=cant name="pizza_10"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_11">Pizza 11:</label></td>
-                            <td><input type="number" id=cant name="pizza_11"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="pizza_12">Pizza 12:</label></td>
-                            <td><input type="number" id=cant name="pizza_12"></td>
-                        </tr>
-                    </table>
-                    <br>
-                    
+                <form action="" name="formPedido">
+                    <div>
+                        Lista de pedidos:
+                    </div>
+                    <ul id="listaPedido"></ul>
+                                        
                     <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre"><br><br>
+                    <input type="text" id="nombre" name="nombre"><br>
+                    <div class="mensajes-alerta" id="alertNombre"></div><br>
                     
                     <label for="direccion">Dirección:</label><br>
-                    <input type="text" id="direccion" name="direccion"><br><br>
+                    <input type="text" id="direccion" name="direccion"><br>
+                    <div class="mensajes-alerta" id="alertDireccion"></div><br>
                     
                     <label for="tel">Teléfono:</label><br>
-                    <input type="number" id="tel" name="tel"><br><br>
+                    <input type="number" id="tel" name="tel"><br>
+                    <div class="mensajes-alerta" id="alertTel"></div><br>
                     
                     <label for="correo">Correo electrónico:</label><br>
-                    <input type="email" id="correo" name="correo"><br><br>
+                    <input type="email" id="correo" name="correo"><br>
+                    <div class="mensajes-alerta" id="alertCorreo"></div><br>
 
                     <label for="">Rango horario de entrega:</label><br>
                     <input type="radio" id="primera" name="hora">
@@ -112,9 +68,16 @@
                     <label for="segunda">Entre las 21:00 y las 22:00</label><br>
                     <input type="radio" id="tercera" name="hora">
                     <label for="tercera">Entre las 22:00 y las 23:00</label><br>
+                    <div class="mensajes-alerta" id="alertHora"></div><br>
+                    <div class="g-recaptcha" data-sitekey="6LeDx6coAAAAACx-FQxEuAY7mMPuFkRt40sQq9Ts"></div>
+                    <div class="mensajes-alerta" id="alertCaptcha"></div><br>
+                    <input type="button" class="boton_agregar_eliminar" value="Enviar" onclick="validarForm()"><br><br>
+                    <div class="envioForm" id="envioForm"></div><br>
+
                 </form>
+
             </div>
-        </div>
+    </div>
     </main>
 
     <footer>
@@ -128,7 +91,9 @@
                 <a href="#"><span class="fa fa-instagram"></span></a>
             </div>
         </div>
+
     </footer>
-</div>
+
 </body>
+
 </html>

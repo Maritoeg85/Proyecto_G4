@@ -233,9 +233,9 @@ footer {
     display: grid;
     grid-template: auto auto auto auto / 25% 25% 25% 25%;
     grid-template-areas: "titulo_pizza titulo_pizza titulo_pizza titulo_pizza" 
-                         "pizza_1 pizza_2 pizza_3 pizza_4"
-                         "pizza_5 pizza_6 pizza_7 pizza_8"
-                         "pizza_9 pizza_10 pizza_11 pizza_12";
+                         "pizza_0 pizza_1 pizza_2 pizza_3"
+                         "pizza_4 pizza_5 pizza_6 pizza_7"
+                         "pizza_8 pizza_9 pizza_10 pizza_11";
 }
 
 .titulo_pizzas {
@@ -292,6 +292,22 @@ footer {
     grid-area: pizza_12;
 }
 
+.boton_agregar_eliminar {
+    font-size: 15px;
+    height: 50px;
+    width: 100px;
+    border-radius: 10%;
+    transition: font-size 0.2s ease;
+}
+
+.boton_agregar_eliminar:hover {
+    font-size: 17px;
+    background-color: lightgreen;
+}
+
+.cantArticulo {
+    font-weight: 600;
+}
 
 /* Estilos para la maquetación de la página Pedidos */
 
@@ -310,10 +326,22 @@ input[id=cant] {
 }
 
 input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
-    width: 100%;
+    width: 20%;
 }
 .titulo_pedido {
     padding-top: 20px;
+}
+
+.mensajes-alerta {
+    color: red;
+    font-weight: 600;
+    font-size: small;
+    margin-top: 5px;
+}
+
+.envioForm {
+    color: rgb(15, 87, 15);
+    font-weight: 600;
 }
 
 /* Media Queries */
@@ -323,10 +351,10 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
         display: grid;
         grid-template: auto auto auto auto auto / 33% auto 33%;
         grid-template-areas: "titulo_pizza titulo_pizza titulo_pizza" 
-                            "pizza_1 pizza_2 pizza_3"                    
-                            "pizza_4 pizza_5 pizza_6"
-                            "pizza_7 pizza_8 pizza_9"
-                            "pizza_10 pizza_11 pizza_12";
+                            "pizza_0 pizza_1 pizza_2"                    
+                            "pizza_3 pizza_4 pizza_5"
+                            "pizza_6 pizza_7 pizza_8"
+                            "pizza_9 pizza_10 pizza_11";
     }
 }
 
@@ -343,12 +371,12 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
         display: grid;
         grid-template: auto auto auto auto auto auto auto/ 50% 50%;
         grid-template-areas: "titulo_pizza titulo_pizza" 
-                            "pizza_1 pizza_2"                    
-                            "pizza_3 pizza_4"
-                            "pizza_5 pizza_6"                    
-                            "pizza_7 pizza_8"
-                            "pizza_9 pizza_10"
-                            "pizza_11 pizza_12";
+                            "pizza_0 pizza_1"                    
+                            "pizza_2 pizza_3"
+                            "pizza_4 pizza_5"                    
+                            "pizza_6 pizza_7"
+                            "pizza_8 pizza_9"
+                            "pizza_10 pizza_11";
     }
 }
 
@@ -357,18 +385,18 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
         display: grid;
         grid-template: auto auto auto auto auto auto auto auto auto auto auto auto auto/ auto;
         grid-template-areas: "titulo_pizza" 
-                            "pizza_1"                    
-                            "pizza_2"
-                            "pizza_3"                    
+                            "pizza_0"                    
+                            "pizza_1"
+                            "pizza_2"                    
+                            "pizza_3"
                             "pizza_4"
                             "pizza_5"
-                            "pizza_6"
-                            "pizza_7"                    
-                            "pizza_8"
-                            "pizza_9"                    
+                            "pizza_6"                    
+                            "pizza_7"
+                            "pizza_8"                    
+                            "pizza_9"
                             "pizza_10"
-                            "pizza_11"
-                            "pizza_12";
+                            "pizza_11";
     }
 }
 
@@ -399,6 +427,7 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
         padding: 0px;
     } 
 }
+
 
 /*************************************/
 /*Contact Panel*/
@@ -482,4 +511,26 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
 }
 .btn-contact:hover{
     cursor: pointer;
+=======
+/* Estilos para la maquetación de la página Contacto */
+
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0,3);
+    z-index: 100;
+}
+
+
+.btn-wsp:hover {
+   text-decoration: none;
+    background: #0df053;
+    color: #fff;
 }
