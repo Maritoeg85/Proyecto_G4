@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/estilos_generales.css">
+    <script type="text/javascript" src="./js/productos.js"></script>
+    <script src="./js/funciones.js"></script>
 </head>
 
 <body>
@@ -30,6 +33,7 @@
             </div>
         </nav>
 
+
     <main>
         <div class="contenedor_grid_pizzas">
             <div class="titulo_pizzas">
@@ -48,6 +52,17 @@
                             <p> Deléitate con la combinación perfecta de tomates secos, jamón crudo de alta calidad, rúcula fresca y queso parmesano fundido sobre nuestra masa crujiente. Una explosión de sabores que te transportará a Italia en cada bocado.</p>
                         </div>
                     </div>
+                        <div>
+                            <p>Cantidad: <span class="cantArticulo">0</span></p>
+                        </div>
+                        <div>
+                            <button class="boton_agregar_eliminar" onclick="agregarPizza(0)">
+                                Agregar
+                            </button>
+                            <button class="boton_agregar_eliminar" onclick="eliminarPizza(0)">
+                                Eliminar
+                            </button>
+                        </div>                  
                 </div>
             </article>
             <article class="pizza_2">    
@@ -91,10 +106,10 @@
                         </div>
                         <div class="texto_pizza">
                             <p>Cebolla caramelizada, jugosa salchicha parrillera y un toque de mostaza se unen para crear una explosión de sabor en cada rebanada. Esta pizza es la elección ideal para los amantes de los contrastes.</p>
-                        </div>
                     </div>
                 </div>
             </article>
+
             <article class="pizza_5">   
                 <div class="fondo_pizzas">  
                     <div class="articulo_pizza">
@@ -215,22 +230,70 @@
                         </div>
                     </div>
                 </div>
-            </article>
-        </div>
-    </main>
+            </article>                       
 
-    <footer>
-        <div class="contenedor-grid-footer">
-            <p>
-                Juan Bautista Alberdi 100 - Ciudad de Buenos Aires
-            </p>
-            <div class="iconos_footer">
-                <a href="#"><span class="fa fa-facebook"></span></a>
-                <a href="#"><span class="fa fa-twitter"></span></a>
-                <a href="#"><span class="fa fa-instagram"></span></a>
+
+               <article class="pizza_2">
+                    <div class="fondo_pizzas">
+                        <div class="articulo_pizza">
+                            <div class="imagen_pizza">
+                                <img src="./img/pizzas/2.jpg" alt="Nuestra historia">
+                            </div>
+                            <div class="nombre_pizza">
+                                <h3>Pizza 2</h3>
+                            </div>
+                            <div class="texto_pizza">
+                                <p>Tiene una deliciosa salsa de pasta de tomate como base. Está cubierta con Queso
+                                    Muzzarella, calabacin, Berengenas, Aceitunas Negras, tomates Cherrys, Oregano. Esta
+                                    combinación de ingredientes seguro te encantara.</p>
+                            </div>
+                            <tr>
+                                <td><label for="pizza_2">Pizza 2:</label></td>
+                                <td><input type="number" id=cant name="pizza_2"></td>
+                            </tr>
+                            <input type="submit" value="Agregar al Pedido">
+                            <input type="reset" value="Borrar">
+                        </div>
+                        <div>
+                            <p>Cantidad: <span class="cantArticulo">0</span></p>
+                        </div>
+                        <div>
+                            <button class="boton_agregar_eliminar" onclick="agregarPizza(4)">
+                                Agregar
+                            </button>
+                            <button class="boton_agregar_eliminar" onclick="eliminarPizza(4)">
+                                Eliminar
+                            </button>
+                        </div>
+                    </div>
+                </article>
             </div>
+        </main>
+
+        <footer>
+            <div class="contenedor-grid-footer">
+                <p>
+                    Juan Bautista Alberdi 100 - Ciudad de Buenos Aires
+                </p>
+                <div class="iconos_footer">
+                    <a href="#"><span class="fa fa-facebook"></span></a>
+                    <a href="#"><span class="fa fa-twitter"></span></a>
+                    <a href="#"><span class="fa fa-instagram"></span></a>
+                </div>
+            </article>
+              
+            
+            <div>
+                <a target="_blank" href=" https://api.whatsapp.com/send?phone=+5491157405597">
+                    <img class=btn-wsp src="img/favicon.png" alt="Logo Whatsapp">
+                </a>
+             </div>
+             <br>
+                
+
+        </footer>
+        <div>
+            <a  href="#irarriba">Ir arriba</a>
         </div>
-    </footer>
-</div>
 </body>
 </html>
