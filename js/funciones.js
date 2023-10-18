@@ -85,6 +85,11 @@ function validarForm() {
     ) { alertHora.innerText = "Seleccione un horario de entrega"; return }
     else { alertHora.innerText = "" }
 
+    let alertCaptcha = document.getElementById("alertCaptcha")
+    if (grecaptcha.getResponse().length == 0) {
+        alertCaptcha.innerText = "Complete la validación del CAPTCHA"; return }
+    else { alertCaptcha.innerText = "" }
+
     let envioForm = document.getElementById("envioForm")
     envioForm.innerText = "Su formulario fue enviado con éxito"
     setTimeout(() => {
