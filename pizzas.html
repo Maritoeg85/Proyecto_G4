@@ -10,7 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/estilos_generales.css">
+<<<<<<< HEAD
     <script type="text/javascript" src="./js/productos.js"></script>
+=======
+    <script src="./js/funciones.js"></script>
+>>>>>>> 7b601d516af42a144b52860fec865654deb84273
 </head>
 
 <body>
@@ -32,6 +36,7 @@
             </div>
         </nav>
 
+<<<<<<< HEAD
         <main>
             <div class="contenedor_grid_pizzas" id="contenedor_grid_pizzas">
                 <div class="titulo_pizzas">
@@ -55,10 +60,42 @@
                                 <td><label for="pizza_1">Pizza 1:</label></td>
                                 <td><input type="number" id=cant name="pizza_1"></td>
                             </tr>
+=======
+
+    <main>
+        <div class="contenedor_grid_pizzas">
+            <div class="titulo_pizzas">
+                <h2>Nuestra pizzas</h2>
+            </div>
+            <article class="pizza_1">     
+                <div class="fondo_pizzas">
+                    <div class="articulo_pizza">
+                        <div class="imagen_pizza">
+                            <img src="./img/udine_1.jpg" alt="Nuestra historia">
+                        </div>
+                        <div class="nombre_pizza">
+                            <h3>Pizza 1</h3>
+                        </div>
+                        <div class="texto_pizza">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident consectetur pariatur tempore praesentium ullam voluptatum cum. Quia perferendis cum sapiente error, ratione assumenda dolore cupiditate libero ipsum corrupti ipsam quidem!</p>
+                        </div>
+                        <div>
+                            <p>Cantidad: <span class="cantArticulo">0</span></p>
+                        </div>
+                        <div>
+                            <button class="boton_agregar_eliminar" onclick="agregarPizza(0)">
+                                Agregar
+                            </button>
+                            <button class="boton_agregar_eliminar" onclick="eliminarPizza(0)">
+                                Eliminar
+                            </button>
+>>>>>>> 7b601d516af42a144b52860fec865654deb84273
                         </div>
                     </div>
-                </article>
-                <article class="pizza_2">
+                </div>
+            </article>
+
+               <article class="pizza_2">
                     <div class="fondo_pizzas">
                         <div class="articulo_pizza">
                             <div class="imagen_pizza">
@@ -76,6 +113,19 @@
                                 <td><label for="pizza_2">Pizza 2:</label></td>
                                 <td><input type="number" id=cant name="pizza_2"></td>
                             </tr>
+                            <input type="submit" value="Agregar al Pedido">
+                            <input type="reset" value="Borrar">
+                        </div>
+                        <div>
+                            <p>Cantidad: <span class="cantArticulo">0</span></p>
+                        </div>
+                        <div>
+                            <button class="boton_agregar_eliminar" onclick="agregarPizza(4)">
+                                Agregar
+                            </button>
+                            <button class="boton_agregar_eliminar" onclick="eliminarPizza(4)">
+                                Eliminar
+                            </button>
                         </div>
                     </div>
                 </article>
@@ -97,6 +147,19 @@
                                 <td><label for="pizza_3">Pizza 3:</label></td>
                                 <td><input type="number" id=cant name="pizza_3"></td>
                             </tr>
+                            <input type="submit" value="Agregar al Pedido">
+                            <input type="reset" value="Borrar">
+                        </div>
+                        <div>
+                            <p>Cantidad: <span class="cantArticulo">0</span></p>
+                        </div>
+                        <div>
+                            <button class="boton_agregar_eliminar" onclick="agregarPizza(5)">
+                                Agregar
+                            </button>
+                            <button class="boton_agregar_eliminar" onclick="eliminarPizza(5)">
+                                Eliminar
+                            </button>
                         </div>
                     </div>
                 </article>
@@ -118,6 +181,8 @@
                                 <td><label for="pizza_4">Pizza 4:</label></td>
                                 <td><input type="number" id=cant name="pizza_4"></td>
                             </tr>
+                            <input type="submit" value="Agregar al Pedido">
+                            <input type="reset" value="Borrar">
                         </div>
 
                 </article>
@@ -139,6 +204,19 @@
                                 <td><label for="pizza_5">Pizza 5:</label></td>
                                 <td><input type="number" id=cant name="pizza_5"></td>
                             </tr>
+                            <input type="submit" value="Agregar al Pedido">
+                            <input type="reset" value="Borrar">
+                        </div>
+                        <div>
+                            <p>Cantidad: <span class="cantArticulo">0</span></p>
+                        </div>
+                        <div>
+                            <button class="boton_agregar_eliminar" onclick="agregarPizza(6)">
+                                Agregar
+                            </button>
+                            <button class="boton_agregar_eliminar" onclick="eliminarPizza(6)">
+                                Eliminar
+                            </button>
                         </div>
                     </div>
                 </article>
@@ -160,6 +238,19 @@
                                 <td><label for="pizza_6">Pizza 6</label></td>
                                 <td><input type="number" id=cant name="pizza_6"></td>
                             </tr>
+                            <input type="submit" value="Agregar al Pedido">
+                            <input type="reset" value="Borrar">
+                        </div>
+                        <div>
+                            <p>Cantidad: <span class="cantArticulo">0</span></p>
+                        </div>
+                        <div>
+                            <button class="boton_agregar_eliminar" onclick="agregarPizza(7)">
+                                Agregar
+                            </button>
+                            <button class="boton_agregar_eliminar" onclick="eliminarPizza(7)">
+                                Eliminar
+                            </button>
                         </div>
                     </div>
                 </article>
@@ -181,6 +272,19 @@
                                 <td><label for="pizza_7">Pizza 7:</label></td>
                                 <td><input type="number" id=cant name="pizza_7"></td>
                             </tr>
+                            <input type="submit" value="Agregar al Pedido">
+                            <input type="reset" value="Borrar">
+                        </div>
+                        <div>
+                            <p>Cantidad: <span class="cantArticulo">0</span></p>
+                        </div>
+                        <div>
+                            <button class="boton_agregar_eliminar" onclick="agregarPizza(8)">
+                                Agregar
+                            </button>
+                            <button class="boton_agregar_eliminar" onclick="eliminarPizza(8)">
+                                Eliminar
+                            </button>
                         </div>
                     </div>
                 </article>
@@ -200,6 +304,19 @@
                                 <td><label for="pizza_8">Adicionales 8:</label></td>
                                 <td><input type="number" id=cant name="pizza_8"></td>
                             </tr>
+                            <input type="submit" value="Agregar al Pedido">
+                            <input type="reset" value="Borrar">
+                        </div>
+                        <div>
+                            <p>Cantidad: <span class="cantArticulo">0</span></p>
+                        </div>
+                        <div>
+                            <button class="boton_agregar_eliminar" onclick="agregarPizza(9)">
+                                Agregar
+                            </button>
+                            <button class="boton_agregar_eliminar" onclick="eliminarPizza(9)">
+                                Eliminar
+                            </button>
                         </div>
                     </div>
                 </article>
@@ -219,6 +336,19 @@
                                 <td><label for="pizza_9">Bebidas 9:</label></td>
                                 <td><input type="number" id=cant name="pizza_9"></td>
                             </tr>
+                            <input type="submit" value="Agregar al Pedido">
+                            <input type="reset" value="Borrar">
+                        </div>
+                        <div>
+                            <p>Cantidad: <span class="cantArticulo">0</span></p>
+                        </div>
+                        <div>
+                            <button class="boton_agregar_eliminar" onclick="agregarPizza(10)">
+                                Agregar
+                            </button>
+                            <button class="boton_agregar_eliminar" onclick="eliminarPizza(10)">
+                                Eliminar
+                            </button>
                         </div>
                     </div>
                 </article>
@@ -236,20 +366,20 @@
                     <a href="#"><span class="fa fa-twitter"></span></a>
                     <a href="#"><span class="fa fa-instagram"></span></a>
                 </div>
-            </div>
+            </article>
+              
+            
             <div>
                 <a target="_blank" href=" https://api.whatsapp.com/send?phone=+5491157405597">
                     <img class=btn-wsp src="img/favicon.png" alt="Logo Whatsapp">
                 </a>
-                </div>
-                <br>
+             </div>
+             <br>
                 
 
         </footer>
         <div>
             <a  href="#irarriba">Ir arriba</a>
         </div>
-    </div>
 </body>
-
 </html>
