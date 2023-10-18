@@ -4,7 +4,6 @@ function testLlamada() {
     console.log("La función testLlamada se realizó con éxito")
 }
 
-<<<<<<< HEAD
 
 
 function agregarPizza(numero) {
@@ -19,7 +18,6 @@ function eliminarPizza(numero) {
   }
 }
 
-=======
 function agregarPizza(numero) {
     let x = document.getElementsByClassName("cantArticulo")
     let arregloCantidad = []
@@ -107,4 +105,3 @@ function validarForm() {
         document.formPedido.submit()
     }, 2000);
 }
->>>>>>> 7b601d516af42a144b52860fec865654deb84273
