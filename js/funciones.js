@@ -5,45 +5,53 @@ function testLlamada() {
 }
 
 function agregarPizza(numero) {
-    let x = document.getElementsByClassName("cantArticulo")
-    let arregloCantidad = []
-    let total = 0
-    for (let i = 0; i < 12; i++) {
-        total = total + parseInt(x[i].innerText)
-    }
+    let cantidadID = document.getElementsByClassName("cantArticulo")
+    let nombreID = document.getElementsByClassName("nombre_pizza")
+    let precioID = document.getElementsByClassName("precioProducto")
+    let arregloDatos = []     
+    let total = parseInt(cantidadID[numero].innerText)
     if (total < 10) {
-        x[numero].innerText = parseInt(x[numero].innerText) + 1
+        cantidadID[numero].innerText = parseInt(cantidadID[numero].innerText) + 1
     }
-    for (let i = 0; i < 12; i++) {
-        arregloCantidad.push(parseInt(x[i].innerText))
-    }
-    localStorage.setItem("Total", JSON.stringify(arregloCantidad))
+    arregloDatos.push(parseInt(cantidadID[numero].innerText), nombreID[numero].innerText, parseInt(precioID[numero].innerText.slice(12,)))
+    localStorage.setItem("Producto"+numero, JSON.stringify(arregloDatos))
 }
 
 function eliminarPizza(numero) {
-    let x = document.getElementsByClassName("cantArticulo")
-    let arregloCantidad = []
-    if (parseInt(x[numero].innerText) > 0) {
-        x[numero].innerText = parseInt(x[numero].innerText) - 1
+    let cantidadID = document.getElementsByClassName("cantArticulo")
+    let nombreID = document.getElementsByClassName("nombre_pizza")
+    let precioID = document.getElementsByClassName("precioProducto")
+    let arregloDatos = []     
+    if (parseInt(cantidadID[numero].innerText) > 0) {
+        cantidadID[numero].innerText = parseInt(cantidadID[numero].innerText) - 1
     }
-    for (let i = 0; i < 12; i++) {
-        arregloCantidad.push(parseInt(x[i].innerText))
-   }
-   localStorage.setItem("Total", JSON.stringify(arregloCantidad))
+    arregloDatos.push(parseInt(cantidadID[numero].innerText), nombreID[numero].innerText, parseInt(precioID[numero].innerText.slice(12,)))
+    localStorage.setItem("Producto"+numero, JSON.stringify(arregloDatos))  
 }
 
 function mostrarPedido() {
     let listaPedidoCompleta = document.getElementById("listaPedido")
-    let listaPizzas = ["Pizza 1", "Pizza 2", "Pizza 3", "Pizza 4", "Pizza 5", "Pizza 6", "Pizza 7", "Pizza 8", "Pizza 9", "Pizza 10", "Pizza 11", "Pizza 12"]
-    let cantidadesPizzas = localStorage.getItem("Total")
-    cantidadesPizzas = JSON.parse(cantidadesPizzas)
-    for (i = 0; i < cantidadesPizzas.length; i++) {
-        if (cantidadesPizzas[i] != "0") {
-            let ingreso = document.createElement("li")
-            ingreso.innerText = cantidadesPizzas[i] + " x " + listaPizzas[i]
-            listaPedidoCompleta.appendChild(ingreso)
+    var total = 0;
+    Object.keys(localStorage).forEach(key => {
+        if ( key.slice(0,8) == "Producto" ) {
+            let producto = localStorage.getItem(key)
+            producto = JSON.parse(producto)
+            if ( producto[0] != "0" ) {
+                let ingreso = document.createElement("li")
+                console.log(producto[1])
+                ingreso.innerText = producto[0] + " " + producto[1] + " por un total de $ " + producto[0]*producto[2]
+                listaPedidoCompleta.appendChild(ingreso)
+                total = total + (producto[0]*producto[2])
+            }
         }
     }
+    )
+    listaPedidoCompleta.innerHTML += `<br>`
+    let final = document.createElement("b")
+    final.innerText = "Total del pedido: $ " + total
+    listaPedidoCompleta.appendChild(final)
+    listaPedidoCompleta.innerHTML += `<br><a>Este monto deberá ser abonado contra entrega</a>`    
+
 }
 
 function enviar() {
@@ -85,8 +93,20 @@ function validarForm() {
     ) { alertHora.innerText = "Seleccione un horario de entrega"; return }
     else { alertHora.innerText = "" }
 
+    let alertCaptcha = document.getElementById("alertCaptcha")
+    if (grecaptcha.getResponse().length == 0) {
+        alertCaptcha.innerText = "Complete la validación del CAPTCHA"; return }
+    else { alertCaptcha.innerText = "" }
+
     let envioForm = document.getElementById("envioForm")
     envioForm.innerText = "Su formulario fue enviado con éxito"
+ 
+    Object.keys(localStorage).forEach(key => {
+        if ( key.slice(0,8) == "Producto" ) {
+            localStorage.removeItem(key)
+        }
+    })
+
     setTimeout(() => {
         document.formPedido.submit()
     }, 2000);
