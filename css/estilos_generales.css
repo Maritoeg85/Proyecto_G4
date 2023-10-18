@@ -553,5 +553,4 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
 }
 .btn-contact:hover{
     cursor: pointer;
-
-
+}
