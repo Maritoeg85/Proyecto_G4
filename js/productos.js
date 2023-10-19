@@ -12,8 +12,22 @@ function leeproductos() {
       .then(lista => { 
       var productos = lista.productos;
       console.log(productos);
-      productos = productos.slice(0,12);
+      productos = productos.slice(0,12); // Los doce que se muestran - después podemos meter un filtro y rearmar la grilla
       console.log(productos);
+
+      // Recupero los datos de localstorage si hay algo
+      Object.keys(localStorage).forEach(key => {
+        if ( key.slice(0,8) == "Producto" ) {
+            let cantidadLocal = localStorage.getItem(key);
+            let orden = parseInt(key.slice(8,10));
+            console.log(orden)
+            cantidadLocal = JSON.parse(cantidadLocal);
+            if ( cantidadLocal[0] != "0" ) {
+              productos[orden].cantidad = cantidadLocal[0];
+            }
+        }
+      })
+
       // Actualiza el contenido del elemento HTML con el id "contenedor_grid_pizzas".
       for (var i = 0 ; i<12 ; i++) {
         if ( productos[i].categoria == "Pizzas" ) {
@@ -32,7 +46,7 @@ function leeproductos() {
                           <p>Ingredientes: ${productos[i].ingredientes}</p>
                       </div>
                       <h4 class="precioProducto">Solo por: $ ${productos[i].precio}</h4>
-                      <a>Cantidad: <span class="cantArticulo">0</span></a>
+                      <a>Cantidad: <span class="cantArticulo">${productos[i].cantidad}</span></a>
                     <div>
                       <button class="boton_agregar_eliminar" onclick="agregarPizza(${i})">
                           Agregar

@@ -12,7 +12,8 @@ Esquema de la API
             "ingredientes": [arreglo],
             "categoria": "texto",
             "imagen": "url",
-            "precio": "valor numerico"
+            "precio": "valor numerico",
+            "cantidad": "valor numerico"
         }
     ]
 }
