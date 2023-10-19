@@ -24,6 +24,7 @@ function leeproductos() {
             cantidadLocal = JSON.parse(cantidadLocal);
             if ( cantidadLocal[0] != "0" ) {
               productos[orden].cantidad = cantidadLocal[0];
+              console.log(orden, cantidadLocal[0])
             }
         }
       })
@@ -73,7 +74,7 @@ function leeproductos() {
                           <p>${productos[i].descripcion}</p>
                       </div>
                       <h4 class="precioProducto">Solo por: $ ${productos[i].precio}</h4>
-                      <a>Cantidad: <span class="cantArticulo">0</span></a>
+                      <a>Cantidad: <span class="cantArticulo">${productos[i].cantidad}</span></a>
                     <div>
                       <button class="boton_agregar_eliminar" onclick="agregarPizza(${i})">
                           Agregar
