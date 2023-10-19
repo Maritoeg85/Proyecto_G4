@@ -50,8 +50,9 @@ function mostrarPedido() {
     let final = document.createElement("b")
     final.innerText = "Total del pedido: $ " + total
     listaPedidoCompleta.appendChild(final)
-    listaPedidoCompleta.innerHTML += `<br><a>Este monto deberá ser abonado contra entrega</a>`    
-
+    if ( total != 0 ) {
+        listaPedidoCompleta.innerHTML += `<br><a>Este monto deberá ser abonado contra entrega</a>`    
+    }
 }
 
 function enviar() {
