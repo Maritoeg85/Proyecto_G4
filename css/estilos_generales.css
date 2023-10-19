@@ -184,7 +184,18 @@ footer {
 
 
 .btn-wsp:hover {
-    transform: scale(1.3);
+    animation: btn-wsp-swing none .8s  ;    
+    transform: scale(1.3)
+}
+.btn-wsp:hover::after {
+    transform: scale(1.3)
+}
+@keyframes btn-wsp-swing {
+    0% {transform: scale(1.3);}
+    33% {transform: rotate(25deg) scale(1.3);}
+    66% {transform: rotate(-25deg) scale(1.3);}
+    100% {transform: scale(1.3);}
+    
 }
 
 /* Estilos para la maquetación de la página Historia */
@@ -244,9 +255,8 @@ footer {
 .texto_pizza {
     text-align: center;
     color: black;
-    min-height: 22vh;
-    width: 97%;
-    padding: 3%;
+    min-height: 18vh;
+    width: 95%;
 }
 
 .imagen_pizza {
@@ -285,6 +295,10 @@ footer {
     grid-area: titulo_pizza;
     display: flex;
     padding-top: 20px;
+}
+
+.pizza_0 {
+    grid-area: pizza_0;
 }
 
 .pizza_1 {
@@ -331,9 +345,6 @@ footer {
     grid-area: pizza_11;
 }
 
-.pizza_12 {
-    grid-area: pizza_12;
-}
 
 .boton_agregar_eliminar {
     font-size: 15px;
@@ -398,6 +409,13 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
                             "pizza_3 pizza_4 pizza_5"
                             "pizza_6 pizza_7 pizza_8"
                             "pizza_9 pizza_10 pizza_11";
+    }
+    .texto_pizza {
+        text-align: center;
+        color: black;
+        min-height: 26vh;
+        width: 97%;
+        padding: 3%;
     }
 }
 
