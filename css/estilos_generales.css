@@ -245,13 +245,14 @@ footer {
     text-align: center;
     color: black;
     min-height: 22vh;
+    width: 97%;
+    padding: 3%;
 }
 
 .imagen_pizza {
     height: 25vh;
     overflow: hidden;
     border-radius: 10%;
-    border: 1px solid black
 }
 
 
