@@ -3,6 +3,7 @@
 function testLlamada() {
     console.log("La función testLlamada se realizó con éxito")
 }
+
 function agregarPizza(numero) {
     let cantidadID = document.getElementsByClassName("cantArticulo")
     let nombreID = document.getElementsByClassName("nombre_pizza")
