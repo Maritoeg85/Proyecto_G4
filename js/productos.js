@@ -32,7 +32,7 @@ function leeproductos() {
       // Actualiza el contenido del elemento HTML con el id "contenedor_grid_pizzas".
       for (var i = 0 ; i<12 ; i++) {
         if ( productos[i].categoria == "Pizzas" ) {
-        contenedor_grid_pizzas.innerHTML += `
+          contenedor_grid_pizzas.innerHTML += `
           <article class="pizza_${i}">
               <div class="fondo_pizzas">
                   <div class="articulo_pizza">
@@ -44,7 +44,7 @@ function leeproductos() {
                       </div>
                       <div class="texto_pizza">
                           <p>${productos[i].descripcion}</p>
-                          <p>Ingredientes: ${productos[i].ingredientes}</p>
+                          <p>Ingredientes: ${productos[i].ingredientes.join(", ")}</p>
                       </div>
                       <h4 class="precioProducto">Solo por: $ ${productos[i].precio}</h4>
                       <a>Cantidad: <span class="cantArticulo">${productos[i].cantidad}</span></a>
