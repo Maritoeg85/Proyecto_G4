@@ -5,7 +5,7 @@
     font-family: 'Special Elite', cursive;
 }
 
-body{
+body {
     background: black;
 }
 
@@ -38,8 +38,8 @@ header div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;  
-    background-image: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url(../img/Madera.jpg); 
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(../img/Madera.jpg);
     background-size: 100%;
 }
 
@@ -69,17 +69,17 @@ nav div div {
     width: 20%;
     height: 30px;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     background-image: url(../img/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
     border-radius: 15px 15px 0px 0px;
     transition: height 0.2s ease;
 }
 
-nav div div a:hover{
-    color:brown;
+nav div div a:hover {
+    color: brown;
 }
 
-nav div div:hover{
+nav div div:hover {
     border: 1px solid black;
     height: 60px;
     align-items: center;
@@ -90,8 +90,8 @@ nav div div:hover{
 .contenedor-grid {
     display: grid;
     grid-template: auto 400px / 30% 30% auto;
-    grid-template-areas: "titulo titulo titulo" 
-                         "imagen_1 imagen_2 texto";
+    grid-template-areas: "titulo titulo titulo"
+        "imagen_1 imagen_2 texto";
 }
 
 .titulo_portada {
@@ -131,7 +131,7 @@ nav div div:hover{
 /* Estilos para la maquetación del footer */
 
 .contenedor-grid-footer {
-    display:grid;
+    display: grid;
     grid-template: auto / auto auto;
     grid-template-areas: "direccion redes";
     color: white;
@@ -177,9 +177,9 @@ footer {
     border-radius: 10px;
     text-align: center;
     font-size: 30px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0,3);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0, 3);
     z-index: 100;
-    transition: transform .2s;    
+    transition: transform .2s;
 }
 
 
@@ -192,8 +192,8 @@ footer {
 .contenedor_grid_historia {
     display: grid;
     grid-template: auto 400px / 30% auto;
-    grid-template-areas: "titulo_historia titulo_historia" 
-                         "imagen_historia texto_historia";
+    grid-template-areas: "titulo_historia titulo_historia"
+        "imagen_historia texto_historia";
 }
 
 .titulo_historia {
@@ -237,7 +237,7 @@ footer {
     border-radius: 1;
 }
 
-.nombre_pizza{
+.nombre_pizza {
     text-align: center;
 }
 
@@ -253,8 +253,6 @@ footer {
     border-radius: 10%;
     border: 1px solid black
 }
-
-
 
 .imagen_pizza img {
     height: 100%
@@ -274,10 +272,10 @@ footer {
 .contenedor_grid_pizzas {
     display: grid;
     grid-template: auto auto auto auto / 25% 25% 25% 25%;
-    grid-template-areas: "titulo_pizza titulo_pizza titulo_pizza titulo_pizza" 
-                         "pizza_0 pizza_1 pizza_2 pizza_3"
-                         "pizza_4 pizza_5 pizza_6 pizza_7"
-                         "pizza_8 pizza_9 pizza_10 pizza_11";
+    grid-template-areas: "titulo_pizza titulo_pizza titulo_pizza titulo_pizza"
+        "pizza_0 pizza_1 pizza_2 pizza_3"
+        "pizza_4 pizza_5 pizza_6 pizza_7"
+        "pizza_8 pizza_9 pizza_10 pizza_11";
 }
 
 .titulo_pizzas {
@@ -350,6 +348,13 @@ footer {
 .cantArticulo {
     font-weight: 600;
 }
+.mipedido {
+    text-align: center;
+    display: grid;
+    color: white;
+    font-weight: 400;
+}
+
 
 /* Estilos para la maquetación de la página Pedidos */
 
@@ -367,9 +372,13 @@ input[id=cant] {
     width: 30px;
 }
 
-input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
+input[id=nombre],
+input[id=direccion],
+input[id=tel],
+input[id=correo] {
     width: 20%;
 }
+
 .titulo_pedido {
     padding-top: 20px;
 }
@@ -392,11 +401,11 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
     .contenedor_grid_pizzas {
         display: grid;
         grid-template: auto auto auto auto auto / 33% auto 33%;
-        grid-template-areas: "titulo_pizza titulo_pizza titulo_pizza" 
-                            "pizza_0 pizza_1 pizza_2"                    
-                            "pizza_3 pizza_4 pizza_5"
-                            "pizza_6 pizza_7 pizza_8"
-                            "pizza_9 pizza_10 pizza_11";
+        grid-template-areas: "titulo_pizza titulo_pizza titulo_pizza"
+            "pizza_0 pizza_1 pizza_2"
+            "pizza_3 pizza_4 pizza_5"
+            "pizza_6 pizza_7 pizza_8"
+            "pizza_9 pizza_10 pizza_11";
     }
 }
 
@@ -404,21 +413,21 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
     .contenedor-grid {
         display: grid;
         grid-template: auto 200px 200px/ 30% auto;
-        grid-template-areas: "titulo titulo" 
-                             "imagen_1 texto"
-                             "imagen_2 texto";
+        grid-template-areas: "titulo titulo"
+            "imagen_1 texto"
+            "imagen_2 texto";
     }
 
     .contenedor_grid_pizzas {
         display: grid;
         grid-template: auto auto auto auto auto auto auto/ 50% 50%;
-        grid-template-areas: "titulo_pizza titulo_pizza" 
-                            "pizza_0 pizza_1"                    
-                            "pizza_2 pizza_3"
-                            "pizza_4 pizza_5"                    
-                            "pizza_6 pizza_7"
-                            "pizza_8 pizza_9"
-                            "pizza_10 pizza_11";
+        grid-template-areas: "titulo_pizza titulo_pizza"
+            "pizza_0 pizza_1"
+            "pizza_2 pizza_3"
+            "pizza_4 pizza_5"
+            "pizza_6 pizza_7"
+            "pizza_8 pizza_9"
+            "pizza_10 pizza_11";
     }
 }
 
@@ -426,19 +435,19 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
     .contenedor_grid_pizzas {
         display: grid;
         grid-template: auto auto auto auto auto auto auto auto auto auto auto auto auto/ auto;
-        grid-template-areas: "titulo_pizza" 
-                            "pizza_0"                    
-                            "pizza_1"
-                            "pizza_2"                    
-                            "pizza_3"
-                            "pizza_4"
-                            "pizza_5"
-                            "pizza_6"                    
-                            "pizza_7"
-                            "pizza_8"                    
-                            "pizza_9"
-                            "pizza_10"
-                            "pizza_11";
+        grid-template-areas: "titulo_pizza"
+            "pizza_0"
+            "pizza_1"
+            "pizza_2"
+            "pizza_3"
+            "pizza_4"
+            "pizza_5"
+            "pizza_6"
+            "pizza_7"
+            "pizza_8"
+            "pizza_9"
+            "pizza_10"
+            "pizza_11";
     }
 }
 
@@ -452,20 +461,21 @@ input[id=nombre], input[id=direccion], input[id=tel], input[id=correo]  {
     .contenedor_grid_historia {
         display: grid;
         grid-template: auto 400px auto / auto;
-        grid-template-areas: "titulo_historia" 
-                             "imagen_historia" 
-                             "texto_historia";
+        grid-template-areas: "titulo_historia"
+            "imagen_historia"
+            "texto_historia";
     }
 
     .contenedor-grid-footer {
         display: grid;
         grid-template: auto auto/ auto;
         grid-template-areas: "direccion"
-                             "redes";
+            "redes";
     }
 
     footer div p {
         grid-area: direccion;
         padding: 0px;
-    } 
+    }
 }
+
