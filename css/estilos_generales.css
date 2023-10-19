@@ -128,6 +128,18 @@ nav div div:hover {
     color: white;
 }
 
+.logo_landing_cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3%;
+    padding: 2%;
+}
+
+.logo_landing {
+max-width: 100%;
+}
+
 /* Estilos para la maquetación del footer */
 
 .contenedor-grid-footer {
