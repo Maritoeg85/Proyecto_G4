@@ -112,3 +112,12 @@ function validarForm() {
         document.formPedido.submit()
     }, 2000);
 }
+
+
+function vaciarCarrito() {
+    Object.keys(localStorage).forEach(key => {
+        if ( key.slice(0,8) == "Producto" ) {
+            localStorage.removeItem(key)
+        }
+    })
+}
