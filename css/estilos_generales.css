@@ -250,7 +250,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    border-radius: 3dvw;
+    border-radius: 3dvb;
     background-image: url(../img/1000_F_299954599_W13RyRyMcugCDfzUzIzVM4SrNVzg3tnQ.jpg);
     /*min-height: 50vh; */
 }
@@ -267,10 +267,15 @@ footer {
 .texto_pizza {
     text-align: center;
     color: black;
-    min-height: 18vh;
     width: 95%;
+    min-height: 20dvh;
+    padding-bottom: 1.4dvb;
 }
 
+.texto_pizza p {
+    margin: 0px;
+    padding-top: 1dvb;
+}
 .imagen_pizza {
     height: 25vh;
     overflow: hidden;
@@ -285,7 +290,6 @@ footer {
     height: 25vh;
     overflow: hidden;
     border-radius: 10%;
-    /* border: 1px solid black */
 }
 
 .imagen_bebida img {
@@ -360,7 +364,7 @@ footer {
     font-size: 15px;
     height: 50px;
     width: 100px;
-    border-radius: 2dvw;
+    border-radius: 1.5dvb;
     transition: font-size 0.2s ease;
 }
 
@@ -434,7 +438,7 @@ input[id=correo] {
     .texto_pizza {
         text-align: center;
         color: black;
-        min-height: 26vh;
+        min-height: 18dvh;
         width: 97%;
         padding: 3%;
     }
@@ -459,6 +463,13 @@ input[id=correo] {
             "pizza_6 pizza_7"
             "pizza_8 pizza_9"
             "pizza_10 pizza_11";
+    }
+    .texto_pizza {
+        text-align: center;
+        color: black;
+        min-height: 18dvh;
+        width: 97%;
+        padding: 3%;
     }
 }
 
