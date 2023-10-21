@@ -404,7 +404,15 @@ input[id=nombre],
 input[id=direccion],
 input[id=tel],
 input[id=correo] {
+    min-width: 250px;
     width: 20%;
+    border-radius: 5px;
+    border: 1px solid black;  
+    height: 30px
+}
+
+::placeholder{
+    color: gray;
 }
 
 .titulo_pedido {
@@ -416,6 +424,11 @@ input[id=correo] {
     font-weight: 600;
     font-size: small;
     margin-top: 5px;
+}
+
+.g-recaptcha {
+    transform: scale(0.85);
+    transform-origin: 0;
 }
 
 .envioForm {
@@ -518,6 +531,10 @@ input[id=correo] {
     footer div p {
         grid-area: direccion;
         padding: 0px;
+    }
+
+    nav div div {
+        font-size: 12px;
     }
 }
 
