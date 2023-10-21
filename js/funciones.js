@@ -83,7 +83,7 @@ function validarForm() {
             contador = contador + 1
         }
     }
-    if (contador != 2) { alertCorreo.innerText = "Escriba una dirección de correo válida"; return  }
+    if (contador < 2) { alertCorreo.innerText = "Escriba una dirección de correo válida"; return  }
     else { alertCorreo.innerText = "" }
     
     let alertHora = document.getElementById("alertHora")
