@@ -18,4 +18,4 @@ Esquema de la API
     ]
 }
 
-La documentacion del proyecto, se encuentra [ACÁ](https://docs.google.com/document/d/1RKZleY_FXY9PD54a7ys_jHFzV4-ojoa05ULICs-3H5g/edit?usp=drivesdk)
+La documentacion del proyecto, se encuentra [ACÁ](https://drive.google.com/file/d/1ZNePEmpIJrDAVhLI7PUBxrzcmY9Lb3k3/view?usp=sharing)
